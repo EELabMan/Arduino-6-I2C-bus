@@ -53,7 +53,7 @@ void loop()
   //wait for response 
   while(Wire.available() == 0);
   // Get the temp and read it into a variable
-  int c = Wire.read(); 
+  int8_t c = Wire.read(); 
  
   //Map the temperatures to LED settings
   int graph = map(c, 24, 31, 0, 7);
@@ -64,7 +64,7 @@ void loop()
   digitalWrite(LATCH, HIGH);        //Latch high - stop sending data
  
   //Do some math to convert the Celsius to Fahrenheit
-  int f = round(c*9.0/5.0 +32.0);
+  int8_t f = round(c*9.0/5.0 +32.0);
  
   Serial.print(c);
   Serial.print("C,");

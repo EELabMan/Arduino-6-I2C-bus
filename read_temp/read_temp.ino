@@ -40,10 +40,10 @@ void loop()
   //wait for response 
   while(Wire.available() == 0);
   // Get the temp and read it into a variable
-  int c = Wire.read(); 
+  int8_t c = Wire.read(); 
  
   //Do some math to convert the Celsius to Fahrenheit
-  int f = round(c*9.0/5.0 +32.0);
+  int8_t f = round(c*9.0/5.0 +32.0);
  
   //Send the temperature in degrees C and F to the serial monitor
   Serial.print(c);
