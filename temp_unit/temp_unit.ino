@@ -18,7 +18,7 @@ const int SER   =8;  //Serial Output to Shift Register
 const int LATCH =9;  //Shift Register Latch Pin
 const int CLK   =10; //Shift Register Clock Pin
 
-int temp_address = 72;
+int temp_address = 0b1001010; //Use 0b before a binary number This is for the TC74 A2 address
 
 //Possible LED settings
 int vals[8] = {1,3,7,15,31,63,127,255};

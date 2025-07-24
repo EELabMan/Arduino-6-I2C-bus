@@ -13,7 +13,7 @@ the Free Software Foundation.
 
 //Include Wire I2C library
 #include <Wire.h>
-int temp_address = 72; //1001000 written as decimal number
+int temp_address = 0b1001010; //Use 0b before a binary number This is for the TC74 A2 address
 
 void setup()
 {
